@@ -8,6 +8,7 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.By.ByCssSelector;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class TestSelenium {
@@ -40,16 +41,22 @@ public class TestSelenium {
     public void testSeleniumSearch() throws Exception{
         WebDriver driver = new FirefoxDriver();
         driver.get("http://www.seleniumhq.org/");
-        Thread.sleep(5000);
+        Thread.sleep(2000);
         WebElement searchBox = driver.findElement(By.linkText("Projects"));
         searchBox.click();
-        Thread.sleep(5000);
+        Thread.sleep(2000);
         WebElement searchLink = driver.findElement(By.linkText("Selenium WebDriver"));
         searchLink.click();
+        Thread.sleep(2000);
         WebElement searchLink2 = driver.findElement(By.linkText("FirefoxDriver"));
         searchLink2.click();
-
-        List<WebElement> searchFirefoxText = driver.findElements(By.linkText("org.openqa.selenium.firefox"));
+        Thread.sleep(2000);
+       // try{
+        List<WebElement> searchFirefoxText = driver.findElements(By.cssSelector(".header .subTitle"));
+        /*}
+        catch(Exception exception){
+           // Assert.assertEquals(0,1);
+        }*/
         Assert.assertEquals(1, searchFirefoxText.size());
         searchBox.submit();
         Thread.sleep(5000);

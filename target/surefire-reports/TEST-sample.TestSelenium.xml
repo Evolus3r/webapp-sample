@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="sample.TestSelenium" time="13.181" tests="1" errors="0" skipped="0" failures="0">
+<testsuite name="sample.TestSelenium" time="26.267" tests="2" errors="1" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64"/>
@@ -59,5 +59,40 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="testGoogleSearch" classname="sample.TestSelenium" time="13.181"/>
+  <testcase name="testSeleniumSearch" classname="sample.TestSelenium" time="13.669">
+    <error message="The element reference of &lt;a href=&quot;/projects/&quot;&gt; is stale; either the element is no longer attached to the DOM, it is not in the current frame context, or the document has been refreshed&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html&#10;Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;&#10;System info: host: &apos;S201PC16&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;4.4.0-128-generic&apos;, java.version: &apos;1.8.0_171&apos;&#10;Driver info: org.openqa.selenium.firefox.FirefoxDriver&#10;Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 60.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 8980, moz:profile: /tmp/rust_mozprofile.aTiNVk..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.4.0-128-generic, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}&#10;Session ID: d8f0501a-33e5-4d93-98cf-5f08bb5d68e9" type="org.openqa.selenium.StaleElementReferenceException"><![CDATA[org.openqa.selenium.StaleElementReferenceException: The element reference of <a href="/projects/"> is stale; either the element is no longer attached to the DOM, it is not in the current frame context, or the document has been refreshed
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'S201PC16', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.4.0-128-generic', java.version: '1.8.0_171'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 60.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 8980, moz:profile: /tmp/rust_mozprofile.aTiNVk..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.4.0-128-generic, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: d8f0501a-33e5-4d93-98cf-5f08bb5d68e9
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
+	at org.openqa.selenium.remote.RemoteWebElement.submit(RemoteWebElement.java:87)
+	at sample.TestSelenium.testSeleniumSearch(TestSelenium.java:61)
+]]></error>
+    <system-err><![CDATA[1529677089587	geckodriver	INFO	geckodriver 0.21.0
+1529677089591	geckodriver	INFO	Listening on 127.0.0.1:21414
+1529677089778	mozrunner::runner	INFO	Running command: "/usr/lib/firefox/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.aTiNVkpgJAjW"
+/usr/lib/firefox/browser/defaults/preferences/syspref.js:7: prefs parse error: unknown keyword
+/usr/lib/firefox/browser/defaults/preferences/syspref.js:7: prefs parse error: unknown keyword
+/usr/lib/firefox/browser/defaults/preferences/syspref.js:7: prefs parse error: unknown keyword
+1529677091153	Marionette	INFO	Listening on port 37333
+1529677091201	Marionette	WARN	TLS certificate errors will be ignored for this session
+Jun 22, 2018 4:18:11 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+/usr/lib/firefox/browser/defaults/preferences/syspref.js:7: prefs parse error: unknown keyword
+]]></system-err>
+  </testcase>
+  <testcase name="testGoogleSearch" classname="sample.TestSelenium" time="12.598"/>
 </testsuite>
