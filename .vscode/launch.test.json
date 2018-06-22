@@ -1,0 +1,28 @@
+{
+    "run": {
+        "default": "",
+        "items": [
+            {
+                "name": "webapp-sample",
+                "projectName": "webapp-sample",
+                "workingDirectory": "/home/eleve/Documents/webapp-sample",
+                "args": [],
+                "vmargs": [],
+                "preLaunchTask": ""
+            }
+        ]
+    },
+    "debug": {
+        "default": "",
+        "items": [
+            {
+                "name": "webapp-sample",
+                "projectName": "webapp-sample",
+                "workingDirectory": "/home/eleve/Documents/webapp-sample",
+                "args": [],
+                "vmargs": [],
+                "preLaunchTask": ""
+            }
+        ]
+    }
+}
